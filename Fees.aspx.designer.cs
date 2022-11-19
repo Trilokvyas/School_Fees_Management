@@ -24,13 +24,13 @@ namespace School_Fees_Management
         protected global::System.Web.UI.WebControls.Label lblSession;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlSession control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSession;
 
         /// <summary>
         /// lblClName control.
@@ -42,13 +42,13 @@ namespace School_Fees_Management
         protected global::System.Web.UI.WebControls.Label lblClName;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// ddlClass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlClass;
 
         /// <summary>
         /// lblAmount control.

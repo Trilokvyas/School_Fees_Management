@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace School_Fees_Management
 {
 
     public partial class ClassCategory : System.Web.UI.Page
     {
-        string constring = "server=DESKTOP-C0J1D8E;database=SchoolFeesManagement; integrated security=true";
+        string constring = ConfigurationManager.ConnectionStrings["MyDbConnectionStr"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {

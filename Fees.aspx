@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Fees.aspx.cs" Inherits="School_Fees_Management.Fees" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
-
     <div class="text-center">
         <h2><u>Fees</u> </h2>
     </div>
@@ -18,7 +15,7 @@
                     <asp:Label ID="lblSession" runat="server" CssClass="form-label" Text="Session"></asp:Label>
                 </div>
                 <div class="col-md-6 text-right">
-                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
+                    <asp:DropDownList ID="ddlSession" runat="server" CssClass="form-control">
                         <asp:ListItem Value="">Please Select Session</asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
@@ -29,7 +26,7 @@
                     <asp:Label ID="lblClName" runat="server" CssClass="form-label" Text="Class Name"></asp:Label>
                 </div>
                 <div class="col-md-6 text-right">
-                    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control">
+                    <asp:DropDownList ID="ddlClass" runat="server" CssClass="form-control">
                         <asp:ListItem Value="">Please Select Class</asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
@@ -55,7 +52,15 @@
     <br />
     <div>
 
-        <asp:GridView ID="GridView1" runat="server" CssClass="table"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server" CssClass="table" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" />
+                <asp:BoundField DataField="ClName" HeaderText="Class" /> 
+                <asp:BoundField DataField="SessionName" HeaderText="Session" />
+                <asp:BoundField DataField="Amount" HeaderText="Fees" />
+
+            </Columns>
+        </asp:GridView>
 
     </div>
 
