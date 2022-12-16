@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Session.aspx.cs" Inherits="School_Fees_Management.Session" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+      <%=Session["MyData"] %>
     <div class="text-center">
         <h2><u>Session</u> </h2>
     </div>

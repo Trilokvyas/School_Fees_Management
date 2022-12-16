@@ -14,10 +14,11 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-6 text-right">
+                    <asp:HiddenField ID="hdnID" runat="server" />
                     <asp:Label ID="lblName" runat="server" CssClass="form-label" Text="Student Name"></asp:Label>
                 </div>
                 <div class="col-md-6">
-                    <asp:TextBox ID="txtName" CssClass=" form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtName" EnableViewState="true" CssClass=" form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
@@ -77,6 +78,12 @@
                     <ItemTemplate>
                         <asp:Button CommandName="Delete" runat="server" Text="Remove" CssClass="btn btn-danger" OnClientClick="return ConfirmDelete();"/>
                     </ItemTemplate>
+                </asp:TemplateField>
+                   <asp:TemplateField HeaderText="Edit">
+                    <ItemTemplate>
+                        <asp:HyperLink Text="Edit" runat="server" NavigateUrl='<%#Eval("ID","~/Registration.aspx?id={0}") %>'>
+                        </asp:HyperLink>
+                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
